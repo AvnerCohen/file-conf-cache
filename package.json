@@ -1,0 +1,10 @@
+{
+  "name": "file-conf-cache",
+  "version": "1.0.0",
+  "description": "A simple node module that allows reading a local file (configuration file) and updating in-memory store in the case of file change.",
+  "main": "index.js",
+  "repository": "git@github.com:AvnerCohen/file-conf-cache.git",
+  "author": "Avner Cohen",
+  "license": "MIT",
+  "dependencies": {}
+}
