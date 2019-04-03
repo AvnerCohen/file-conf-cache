@@ -17,7 +17,7 @@ assert.equal(conf._id, old_id, "Verify fingerprint is consistent")
 
 // Setup change: touch file, reread data
 fs.utimesSync(filePath, new Date(), new Date())
-assert.equal(conf.getValue(readerMethod, 'text'), "a string", "Make sure can read stringvalue from file")
+assert.equal(conf.getValue(readerMethod, 'text'), "a string", "Make sure can read string value from file")
 // Done setup change
 assert.notEqual(conf._id, old_id, "Verify fingerprint changes after file change")
 

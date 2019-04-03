@@ -25,7 +25,7 @@ conf.getValue(readerMethod, 'somevalue')
 
 ##### Reader method
 
-Reader method is left for the client to implment to allow functionallties such as default value:
+Reader method is left for the client to implment to allow functionalities such as default value:
 ````js
 function readerMethod (_, key, defaultValue){
   return _[key] || defaultValue;
@@ -35,6 +35,5 @@ conf.getValue(readerMethod, 'non-existing', 'marak') == 'marak'
 
 ````
 
-Or various other more comple logic
-
+Or various other more complicated logic
 
