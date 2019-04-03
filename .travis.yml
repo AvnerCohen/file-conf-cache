@@ -6,6 +6,6 @@ cache:
   directories:
   - node_modules
 install:
-- yarn install
+- yarn install --dev
 script:
 - yarn test
