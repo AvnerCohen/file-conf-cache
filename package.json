@@ -7,7 +7,7 @@
   "author": "Avner Cohen",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "./node_modules/jest/bin/jest.js"
   },
   "dependencies": {},
   "devDependencies": {
