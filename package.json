@@ -9,7 +9,8 @@
   "scripts": {
     "test": "jest"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "jest": "24.7.0"
   }
 }
