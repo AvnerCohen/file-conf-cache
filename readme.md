@@ -1,6 +1,7 @@
 # File Conf Cache
 
-https://travis-ci.org/AvnerCohen/file-conf-cache.svg?branch=master
+
+[![Build status](https://travis-ci.org/AvnerCohen/file-conf-cache.svg?branch=master)](https://github.com/AvnerCohen/file-conf-cache)
 
 A simple node js module that allows treating a local file as a configuration database.
 

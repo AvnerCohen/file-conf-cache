@@ -6,5 +6,10 @@
   "repository": "git@github.com:AvnerCohen/file-conf-cache.git",
   "author": "Avner Cohen",
   "license": "MIT",
-  "dependencies": {}
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "jest": "24.7.0"
+  }
 }

@@ -11,20 +11,29 @@ function readerMethod (_, key){
   return _[key];
 }
 
-assert.ok(conf._id, "Verify cache has a fingerprint version")
-assert.equal(conf.getValue(readerMethod, 'number'), 123, "Make sure can read value from file")
-assert.equal(conf._id, old_id, "Verify fingerprint is consistent")
 
-// Setup change: touch file, reread data
-fs.utimesSync(filePath, new Date(), new Date())
-assert.equal(conf.getValue(readerMethod, 'text'), "a string", "Make sure can read string value from file")
-// Done setup change
-assert.notEqual(conf._id, old_id, "Verify fingerprint changes after file change")
+test('Verify cache has a fingerprint version', () => {
+  expect(conf._id).not.toBe(null);
+});
 
+test('Can read value from file', () => {
+  expect(conf.getValue(readerMethod, 'number')).toBe(123);
+});
 
-// Test reader method with default variable
-function readerMethod (_, key, defaultValue){
-  return _[key] || defaultValue;
-}
+test('fingerprint is consistent', () => {
+  expect(conf._id).toBe(old_id);
+});
 
-assert.equal(conf.getValue(readerMethod, 'non-existing', 'marak'), "marak", "Make sure reader function support defaults")
+test('Change in file to change fingerprint', () => {
+  fs.utimesSync(filePath, new Date(), new Date())
+  expect(conf.getValue(readerMethod, 'text')).toBe("a string");
+  expect(conf._id).not.toBe(old_id);
+});
+
+test('Reader with default value', () => {
+  function readerMethod (_, key, defaultValue) {
+    return _[key] || defaultValue[0];
+  }
+  expect(conf.getValue(readerMethod, 'non-existing', 'marak')).toBe('marak');
+});
+
