@@ -1,4 +1,7 @@
 # File Conf Cache
+
+https://travis-ci.org/AvnerCohen/file-conf-cache.svg?branch=master
+
 A simple node js module that allows treating a local file as a configuration database.
 
 This is done by making sure that every property read will efficiently check if the file is updated, if it is, the repository will be updated.
